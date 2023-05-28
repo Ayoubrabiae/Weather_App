@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #fff;
+  --bg-color: #f8f8f8;
+  --act-color: #ff9800;
+  --drt: 0.3s;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* App Styling */
+main {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  box-shadow: 0 0 10px #777;
+  min-width: 300px;
+  position: relative;
+}
+
+h2 {
+  border-bottom: 2px solid #ccc;
+  padding: 20px 20px 18px;
+  color: var(--primary-color);
+}
+
+.get-location {
+  padding: 40px 20px 20px;
+}
+
+.get-location p {
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  transition-duration: var(--drt);
+  display: none;
+}
+
+.get-location p.true {
+  background-color: rgb(52 152 219 / 60%);
+  border: 2px solid rgb(52 152 219 / 70%);
+}
+
+.get-location p.false {
+  background-color: rgb(255 0 0 / 60%);
+  border: 2px solid rgb(255 0 0 / 70%);
+}
+
+.get-location input {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  font-family: inherit;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.get-location span {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.get-location span::before,
+.get-location span::after {
+  content: "";
+  position: absolute;
+  content: "";
+  position: absolute;
+  background-color: #777;
+  width: calc(50% - 22.5px);
+  height: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.get-location span::before {
+  left: 0;
+}
+
+.get-location span::after {
+  right: 0;
+}
+
+.get-location button {
+  width: 100%;
+  padding: 10px;
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.weather {
+  display: flex;
+  width: 850px;
+  max-width: 100%;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .weather {
+    flex-direction: column;
+    min-height: calc(100vh - 69px);
+  }
+}
+
+.weather .main {
+  width: 40%;
+  border-right: 2px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .weather .main {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+  }
+}
+
+.weather .main .icon {
+  width: 70%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+@media (max-width: 767px) {
+  .weather .main .icon {
+    width: 50%;
+  }
+}
+
+.weather .main .temp {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.weather .main .description {
+  margin-bottom: 20px;
+}
+
+.weather .side {
+  width: 60%;
+  display: grid;
+}
+
+@media (max-width: 767px) {
+  .weather .side {
+    width: 100%;
+  }
+}
+
+.weather .side div:not(div.temp-min-max) {
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.weather .side div:not(div.temp-min-max) i {
+  font-size: 50px;
+  grid-row: 1/3;
+  text-align: right;
+  margin-right: 20px;
+  color: var(--act-color);
+}
+
+
+.weather .side div:not(div.temp-min-max) span:first-of-type {
+  font-weight: bold;
+}
+
+.weather .side .feels-like {
+  border-bottom: 2px solid #ccc;
+}
+
+.weather .side .temp-min-max {
+  border-bottom: 2px solid #ccc;
+  display: flex;
+}
+
+.weather .side .max,
+.weather .side .min {
+  width: 50%;
+}
+
+
+.weather .side .min {
+  border-left: 2px solid #ccc;
+}
+
+.weather .side .humidity i {
+  color: var(--primary-color) !important;
+}
+
+.weather .return {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 22px;
+  color: var(--primary-color);
+  cursor: pointer;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body>
+  <main>
+    <h2>Weather</h2>
+    <div class="get-location">
+      <p class="true">We can't find this city</p>
+      <input type="text" placeholder="Please Enter Your City Name">
+      <span>or</span>
+      <button>Get Device location</button>
+    </div>
+    <div class="weather">
+      <i class="fa-solid fa-rotate-left return"></i>
+      <div class="main">
+        <img class="icon" src="" alt="Weather Image">
+        <div class="temp">23°C</div>
+        <p class="description">scattered clouds</p>
+        <p class="location">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>ELJADIDA, Morocco</span>
+        </p>
+      </div>
+      <div class="side">
+        <div class="feels-like">
+          <i class="fa-solid fa-temperature-half"></i>
+          <span>23°C</span>
+          <span>feels like</span>
+        </div>
+        <div class="temp-min-max">
+          <div class="max">
+            <i class="fa-solid fa-temperature-full"></i>
+            <span>25°C</span>
+            <span>max</span>
+          </div>
+          <div class="min">
+            <i class="fa-solid fa-temperature-empty"></i>
+            <span>22°C</span>
+            <span>min</span>
+          </div>
+        </div>
+        <div class="humidity">
+          <i class="fa-solid fa-droplet"></i>
+          <span>60%</span>
+          <span>humidity</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
