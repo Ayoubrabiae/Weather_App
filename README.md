@@ -21,4 +21,4 @@ This app utilizes the following API:
 
 - openweathermap api: https://openweathermap.org/api
 
-you can use this link to visit the app: ayoubrabiyae.github.io/Weater_App/
+you can use this link to visit the app: https://ayoubrabiae.github.io/Weather_App/
